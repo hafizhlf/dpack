@@ -1,0 +1,51 @@
+<odoo>
+
+    <!-- Tree View -->
+    <record id="view_dragon_stock_adjustment_tree" model="ir.ui.view">
+        <field name="name">dragon.stock.adjustment.tree</field>
+        <field name="model">dragon.stock.adjustment</field>
+        <field name="arch" type="xml">
+            <tree string="Inventory Adjustments">
+                <field name="product_id"/>
+                <field name="uom_id"/>
+                <field name="quantity"/>
+                <field name="stock_location_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="view_dragon_stock_adjustment_form" model="ir.ui.view">
+        <field name="name">dragon.stock.adjustment.form</field>
+        <field name="model">dragon.stock.adjustment</field>
+        <field name="arch" type="xml">
+            <form string="Inventory Adjustment">
+                <sheet>
+                    <field name="dummy_field_as_button" widget="dr_barcode_scanner" readonly="1"/>
+                    <group>
+                        <field name="product_id"/>
+                        <field name="uom_id"/>
+                        <field name="quantity"/>
+                        <field name="stock_location_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_dragon_stock_adjustment" model="ir.actions.act_window">
+        <field name="name">Inventory Adjustments</field>
+        <field name="res_model">dragon.stock.adjustment</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Menu Items -->
+    <menuitem id="menu_dragon_inventory_root" name="Inventory" sequence="10"/>
+
+    <menuitem id="menu_dragon_stock_adjustment"
+              name="Stock Adjustments"
+              parent="menu_dragon_inventory_root"
+              action="action_dragon_stock_adjustment"
+              sequence="20"/>
+</odoo>

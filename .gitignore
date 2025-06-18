@@ -1,0 +1,75 @@
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Odoo specific
+*.log
+*.swp
+*.bak
+*.tmp
+*.db
+*.sql
+
+# Database dumps
+*.dump
+*.sql.gz
+*.zip
+
+# Environment
+.env
+.env.*
+
+# Virtual environments
+.env/
+.venv/
+venv/
+ENV/
+env/
+Pipfile.lock
+
+# Node modules (if using frontend assets)
+node_modules/
+
+# Compiled assets
+*.sass-cache
+*.css.map
+*.js.map
+
+# IDEs and editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Odoo build artifacts
+/dist/
+*.egg-info/
+*.eggs/
+*.pot
+*.mo
+
+# Coverage & test
+.coverage
+.tox/
+.nox/
+htmlcov/
+.cache/
+.pytest_cache/
+
+# Custom module folders (if not versioned)
+# Uncomment and add any directories you don’t want tracked
+# odoo/addons/my_module/
+# addons/custom_module/
+
+# Docker files (if using Docker)
+docker-compose.override.yml
+*.pid
+
+# Odoo auto-generated files
+*.mr.developer.cfg
